@@ -1,12 +1,12 @@
 class Solution {
 public:
-    bool isPalindrome(int x) {
-        int originalNumber = x;
+    bool isPalindrome(int number) {
+        int originalNumber = number;
         double reverseNumber = 0;
-        while(x > 0){
-            int lastDigit = x%10;
+        while(number > 0){
+            int lastDigit = number%10;
             reverseNumber = reverseNumber * 10 + lastDigit;
-            x = x/10;
+            number = number/10;
         }
         if(originalNumber == reverseNumber){
 
