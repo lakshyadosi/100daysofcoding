@@ -10,7 +10,7 @@ class Solution {
         vector<int> ls;
         for(int i=1 ; i*i <= n ; i++){
             if(n%i == 0){
-                ls.push_back(i);
+                cout << i << " "; 
                 if(n/i !=i){
                     ls.push_back(n/i);
                 }
