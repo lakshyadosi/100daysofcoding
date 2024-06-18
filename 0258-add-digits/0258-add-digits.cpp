@@ -10,9 +10,9 @@ public:
           number = number/10;
        }
        if(count > 1){
-        addDigits(sum);
+        return addDigits(sum);
        } 
-       return count;
+       return sum;
     }
 
 };
