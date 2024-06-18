@@ -18,7 +18,7 @@ class Solution {
         }
         
     sort(ls.begin(), ls.end());
-    for(int n: ls) cout << n << " ";
+    for(auto n: ls) cout << n << " ";
       
     }
 };
