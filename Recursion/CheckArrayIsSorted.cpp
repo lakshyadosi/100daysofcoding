@@ -1,17 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int helper(int count, int n){
-  if(n == 0){
-    return count;
-  }
-  int lastDigit = n%10;
-  if(lastDigit == 0){
-    return helper(++count, n/10);
-  }
-  return helper(count, n/10);  
-}
-
 bool isArraySorted(int arr[],int size, int index){
   if(index == size -1){
     return true;
