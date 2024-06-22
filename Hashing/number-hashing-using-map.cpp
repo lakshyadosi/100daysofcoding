@@ -25,6 +25,12 @@ int main(){
   for(int i=0;i<n;i++){
     mpp[arr[i]] = mpp[arr[i]] + 1;
   }
+  // iterate over the map:
+    /* for(auto it : mp){
+            cout << it.first << "->" << it.second << endl;
+        }
+    */
+
   int q; 
   cin>> q;
   while(q--){
