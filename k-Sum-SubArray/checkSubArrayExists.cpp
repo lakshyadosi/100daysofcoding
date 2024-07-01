@@ -5,7 +5,7 @@ using namespace std;
 bool isSubArrayExists(int arr[], int n, int k){
   int sum = 0;
   set<int> mySet;
-  mySet.insert(0);
+  mySet.insert(0); // for sum == k
   for(int i=0;i<n;i++){
     sum = sum + arr[i];
     int remaining = sum -k;
