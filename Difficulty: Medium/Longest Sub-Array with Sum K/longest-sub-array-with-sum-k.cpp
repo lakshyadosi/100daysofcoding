@@ -8,21 +8,20 @@ class Solution{
     public:
     int lenOfLongSubarr(int arr[],  int n, int k) 
     { 
-        long long sum = 0;
+        int sum = 0;
         int maxLength = 0;
         unordered_map<int,int> myMap;
-        myMap[0] = -1;
+        myMap[0] = {-1};
         for(int i=0;i<n;i++){
             sum = sum + arr[i];
-            int remaining = sum - k;
-            if(myMap.find(remaining) != myMap.end()){
-                int length = i - myMap[remaining];
+            int rem = sum - k;
+            if(myMap.find(rem) != myMap.end()){
+                int length = i - myMap[rem];
                 maxLength = max(maxLength, length);
             }
-           if(myMap.find(sum) == myMap.end()) {
-            myMap[sum] = i;
-        }
-           
+            if(myMap.find(sum) == myMap.end()){
+                myMap[sum] = i; 
+            }
         }
         
         return maxLength;
