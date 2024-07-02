@@ -19,6 +19,7 @@ class Solution{
                 int length = i - myMap[rem];
                 maxLength = max(maxLength, length);
             }
+    // dont update , take the first preferences so that we get the maximum
             if(myMap.find(sum) == myMap.end()){
                 myMap[sum] = i; 
             }
