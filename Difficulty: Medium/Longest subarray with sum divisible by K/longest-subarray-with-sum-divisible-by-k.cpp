@@ -10,7 +10,7 @@ public:
 	int longSubarrWthSumDivByK(int arr[], int n, int k)
 	{
 	    int sum = 0;
-	    int maxLen = 0;
+	    int maxLen = 0; // dont initialize with INT_MIN becuase length can't be in negative
 	    unordered_map<int, int> myMap;
 	    myMap[0] = -1;
 	    int count =0;
@@ -21,7 +21,7 @@ public:
 	            remainder = remainder + k;
 	        }
 	        
-	        // covenrt negative remainder to positive
+	       
 	        if(myMap.find(remainder) != myMap.end()){
 	            int length = i - myMap[remainder];
 	            maxLen = max(maxLen, length); 
@@ -33,6 +33,7 @@ public:
 	    return maxLen;
 	}
 };
+
 
 //{ Driver Code Starts.
 
