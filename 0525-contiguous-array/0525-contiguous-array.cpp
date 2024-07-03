@@ -11,6 +11,9 @@ public:
                 int length = i - myMap[sum];
                 maxLength = max(maxLength, length);
              }
+             if(myMap.find(sum) == myMap.end()){
+                myMap[sum] = i;
+             }
         }
         return maxLength;
     }
