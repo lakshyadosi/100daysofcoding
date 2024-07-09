@@ -13,7 +13,7 @@ public:
                 r++;
             }
             if(l < r){
-            reverse(s.begin()+l, s.begin()+r);
+            reverse(s.begin()+l, s.begin()+r); // rever the string from l to r-1
             s[r] = ' ';
             r++;
             l = r;
