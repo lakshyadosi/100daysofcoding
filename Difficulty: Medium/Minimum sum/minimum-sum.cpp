@@ -1,6 +1,20 @@
 //{ Driver Code Starts
 //Initial template for C++
 
+/*
+Understanding stringstream and String Concatenation
+1. When using += for string concatenation, every time you concatenate a new string, 
+   a new string object is created, and the contents of the old string are copied to the new one along with the new contents. 
+   This can be inefficient, especially inside loops, involving multiple allocations and copies.
+
+2. stringstream is a part of the C++ Standard Library, found in the <sstream> header. 
+   It allows you to build strings more efficiently, particularly when concatenating multiple strings or other data types.
+
+3. Use +=: For simple, infrequent concatenations where performance is not critical.
+   Use stringstream: For efficient, repeated concatenations, especially in loops or when mixing data types.
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -48,7 +62,7 @@ public:
    }
     string solve(int arr[], int n) {
        string s1 = "", s2 = "";    
-       stringstream ss1, ss2;
+       stringstream ss1, ss2; // check the comment provided on top of the file 
         sort(arr, arr+n);
         for(int i=0;i<n;i++){
             if (i % 2 == 0) {
