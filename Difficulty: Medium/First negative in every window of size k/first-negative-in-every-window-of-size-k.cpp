@@ -29,36 +29,36 @@ int main() {
 // } Driver Code Ends
 
 
-vector<long long> printFirstNegativeInteger(long long int arr[],
-                                             long long int n, long long int k) {
-      vector<long long> ls;
-      vector<long long> result;
-      int i=0;
-      int j=0;
-      while(j<n){
-          if(arr[j] < 0){
-          ls.push_back(arr[j]);
-          }
-          if(j-i+1 < k){
-              j++;
-          }
-          else{
-              if(j-i+ 1 == k){
-                   if(ls.empty()){
-                  result.push_back(0);
-                  }
-                  if(!ls.empty()){
-                 result.push_back(ls[0]);
-                  if(arr[i] < 0){
-                      ls.erase(ls.begin());
-                  }
-                  }
-                 
-                
-                  i++;
-                  j++;
-              }
-          }
-      }
-      return result;
+vector<long long> printFirstNegativeInteger(long long int A[],
+                                             long long int N, long long int K) {
+                                                 
+               
+    int i = 0;
+    int j =0;
+    vector<int> temp;
+    vector<long long> result;
+    
+    while(j < N){
+        if(A[j]<0){
+            temp.push_back(A[j]);
+        }
+        if(j-i+1 < K){
+            j++;
+        }
+        else if(j-i+1 == K){
+            if(temp.empty()){
+                result.push_back(0);
+            }
+            if(!temp.empty()){
+            result.push_back(temp[0]);
+            if(A[i] == temp[0]){
+                temp.erase(temp.begin());
+            }
+            }
+            i++;
+            j++;
+        }
+    }
+    return result;
+                                                 
  }
