@@ -16,6 +16,6 @@ public:
             suff = suff * nums[n-1 -i];
             ans = max(ans, max(pre, suff));
         }
-        return (int)ans;
+        return ans;
     }
 };
