@@ -49,7 +49,7 @@ public:
     }
 };
 
-/ *
+/*
 Approach 2: Apply binary search two times
 */
 class Solution {
