@@ -1,4 +1,4 @@
-/ *
+/*
 Approach 1: using lowe and upper bound
 */
 class Solution {
