@@ -9,7 +9,7 @@ public:
             if(nums[mid] == target){
                 return true;
             }
-            if(nums[low] == nums[mid] && nums[mid]== nums[high]){
+            if(nums[low] == nums[mid] && nums[mid]== nums[high]){ //Important condition
                 low++;
                 high--;
                 continue;
