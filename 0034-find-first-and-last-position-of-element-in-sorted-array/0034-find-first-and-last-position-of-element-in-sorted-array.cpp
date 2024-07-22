@@ -90,7 +90,7 @@ public:
     vector<int> searchRange(vector<int>& nums, int target) {
         int n = nums.size();
         int first = firstOccurances(nums, n , target);
-        if(first == -1){
+        if(first == -1){ // important
             return {-1, -1};
         }
         int last = lastOccurances(nums, n, target);
