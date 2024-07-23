@@ -7,6 +7,12 @@ public:
         int ans = INT_MAX;
         while(low <= high){
             int mid = low + (high - low)/2;
+            
+            //Search space is already sorted
+            if(nums[low] <= nums[high]){
+                ans = min(ans, nums[low]);
+                break;
+            }
             if(nums[mid] >= nums[low]){
                 ans = min(ans, nums[low]);
                 low = mid +1;
