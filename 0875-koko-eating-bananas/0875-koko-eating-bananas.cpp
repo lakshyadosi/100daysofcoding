@@ -14,6 +14,7 @@ public:
         int maxSpeed = 0;
         for(int i=0; i< n; i++){
           maxSpeed = max(maxSpeed, piles[i]);
+          minSpeed = min(minSpeed, piles[i]);
         }
         while(minSpeed <= maxSpeed){
             int mid = minSpeed + (maxSpeed - minSpeed)/2;
