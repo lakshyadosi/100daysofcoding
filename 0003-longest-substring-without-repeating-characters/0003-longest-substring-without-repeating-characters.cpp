@@ -12,9 +12,6 @@ public:
             // If a character is repeated, shrink the window from the left
             while (myMap[s[j]] > 1) {
                 myMap[s[i]]--;
-                if (myMap[s[i]] == 0) {
-                    myMap.erase(s[i]);
-                }
                 i++;
             }
 
