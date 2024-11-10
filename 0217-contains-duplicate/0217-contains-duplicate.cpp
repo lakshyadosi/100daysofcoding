@@ -2,13 +2,14 @@ class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
         set<int> mySet;
+        int size = nums.size();
 
-        for(int i=0; i< nums.size(); i++){
-            if(mySet.find(nums[i]) != mySet.end()){
+        for(int currentIndex=0; currentIndex< size; currentIndex++){
+            if(mySet.find(nums[currentIndex]) != mySet.end()){
                 return true;
             }
             else{
-                mySet.insert(nums[i]);
+                mySet.insert(nums[currentIndex]);
             }
         }
         return false;
