@@ -1,5 +1,8 @@
 /*
 First way -> Brute foprce approach
+Time Complexity: O(n^2)
+Space Complexity: O(1) (excluding output)
+
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
@@ -41,6 +44,10 @@ public:
 */
 
 /* using O(n)
+Optimized Approach with Prefix and Suffix Products
+Time Complexity: O(n)
+Space Complexity: O(n) for prefix and suffix arrays
+
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
@@ -65,24 +72,30 @@ public:
 };
 */
 
-// class Solution {
-// public:
-//     vector<int> productExceptSelf(vector<int>& nums) {
-//        int n = nums.size();
-//        vector<int> result(n,1);
+/*
+Optimized Approach with O(1) Space Complexity (excluding output)
+Time Complexity: O(n)
+Space Complexity: O(1) (excluding output)
 
-//        for(int i=1; i<n;i++){
-//           result[i] = result[i-1] * nums[i-1];
-//        }
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+       int n = nums.size();
+       vector<int> result(n,1);
+
+       for(int i=1; i<n;i++){
+          result[i] = result[i-1] * nums[i-1];
+       }
          
-//          int suffix = 1;
-//         for(int i=n-2; i>=0;i--){
-//           suffix = suffix * nums[i+1];
-//           result[i] = result[i] * suffix;
-//        }
-//        return result;
-// }
-// };
+         int suffix = 1;
+        for(int i=n-2; i>=0;i--){
+          suffix = suffix * nums[i+1];
+          result[i] = result[i] * suffix;
+       }
+       return result;
+}
+};
+*/
 
 class Solution {
 public:
