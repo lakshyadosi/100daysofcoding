@@ -31,17 +31,19 @@ public:
         // sort
         sort(nums.begin(), nums.end());
         int frequency = 1;
+        int ans = nums[0];
         for(int i=1; i< size; i++){
-          if(nums[i] == nums[i-1]){
-            frequency++;
-            if(frequency > size/2){
-                return nums[i];
-            }
-          }
-          else{
-            frequency = 1;
-          }
+         if(nums[i] == nums[i-1]){
+           frequency++;
+         }
+         else{
+            frequency =1;
+            ans = nums[i];
+         }
+         if(frequency > size/2){
+            return ans;
+         }
         }
-        return 0;
+        return ans;
     }     
 };
