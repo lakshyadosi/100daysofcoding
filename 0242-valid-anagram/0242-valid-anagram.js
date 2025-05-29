@@ -11,6 +11,9 @@ var isAnagram = function(s, t) {
    }
 
    for(let ch of t){
+    if(!myMap.has(ch)){
+        return false;
+    }
      if(myMap.has(ch)){
         myMap.set(ch, myMap.get(ch) -1);
         if(myMap.get(ch) == 0){
