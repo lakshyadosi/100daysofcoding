@@ -9,26 +9,28 @@ var mergeArrays = function(nums1, nums2) {
     let result = [];
 
     while(num1Point < nums1.length && num2Point <  nums2.length){
-        if(nums1[num1Point][0] === nums2[num2Point][0]){
-            result.push([nums1[num1Point][0], nums1[num1Point][1] + nums2[num2Point][1]])
+        const [id1, val1] = nums1[num1Point];
+          const [id2, val2] = nums2[num2Point];
+        if(id1 == id2){
+            result.push([id1, val1 + val2])
             num1Point++;
             num2Point++;
         }
-        else if(nums1[num1Point][0] < nums2[num2Point][0]){
-              result.push([nums1[num1Point][0], nums1[num1Point][1]])
+        else if(id1 < id2){
+              result.push([id1, val1])
               num1Point++;
         }
-        else if(nums1[num1Point][0] > nums2[num2Point][0]){
-              result.push([nums2[num2Point][0], nums2[num2Point][1]])
+        else if(id1 > id2){
+               result.push([id2, val2])
               num2Point++;
         }
     }
       while(num1Point < nums1.length){
-         result.push([nums1[num1Point][0], nums1[num1Point][1]]);
+         result.push(nums1[num1Point]);
          num1Point++;
       }
        while(num2Point < nums2.length){
-         result.push([nums2[num2Point][0], nums2[num2Point][1]]);
+          result.push(nums2[num2Point]);
          num2Point++;
       }
       return result;
