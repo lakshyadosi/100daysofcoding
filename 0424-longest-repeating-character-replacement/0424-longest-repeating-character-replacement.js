@@ -17,6 +17,7 @@ var characterReplacement = function(s, k) {
        }        
        while((j-i+1) - maxFreq > k){
            myMap.set(s[i], myMap.get(s[i]) -1);
+           maxFreq = Math.max(...myMap.values());
            i++;
        }
        maxLen = Math.max(maxLen, j-i+1);
