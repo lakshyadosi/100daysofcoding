@@ -15,13 +15,12 @@ var merge = function(intervals) {
     for(let i = 1; i< intervals.length; i++){
         if(intervals[i][0] <= interval[1]){
            interval[1] = Math.max(interval[1],intervals[i][1]);
-          result.push(interval)
         }
         else{
              result.push(interval);
             interval = intervals[i];    
         }
-
     }
+     result.push(interval)
     return result;
 };
